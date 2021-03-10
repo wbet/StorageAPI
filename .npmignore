@@ -1,0 +1,10 @@
+**/src/**
+**/node_modules
+
+**/*.tsbuildinfo
+**/.prettierrc
+**/.gitignore
+**/package-lock.json
+**/tsconfig.json
+**/Thumbs.db
+**/webpack.*.js
