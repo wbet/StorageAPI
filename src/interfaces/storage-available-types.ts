@@ -1,3 +1,5 @@
-export type BasicTypes = string | number | boolean;
-export type ObjectType = { [key: string]: StorageAvailableTypes };
-export type StorageAvailableTypes = BasicTypes | BasicTypes[] | ObjectType;
+export type BasicTypes = string | number | boolean | string[] | number[] | boolean[];
+export interface StorageObjectType<T = StorageAvailableTypes> {
+    [key: string]: T;
+}
+export type StorageAvailableTypes = BasicTypes | StorageObjectType | StorageObjectType[];
