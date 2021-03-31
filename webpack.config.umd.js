@@ -19,5 +19,5 @@ module.exports = {
         libraryTarget: 'umd',
         umdNamedDefine: true
     },
-    mode: 'production'
+    mode: 'development'
 };
