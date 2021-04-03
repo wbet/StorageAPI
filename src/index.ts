@@ -1,3 +1,5 @@
+import { StorageType } from './enums/storage-type';
+import { BasicTypes, StorageAvailableTypes, StorageObjectType } from './interfaces/storage-available-types';
 import {
     getAllLocalStorage,
     getAllManagedStorage,
@@ -41,5 +43,9 @@ export {
     saveToLocalStorage,
     saveToSyncStorage,
     saveToStorage,
-    saveManyToStorage
+    saveManyToStorage,
+    BasicTypes,
+    StorageAvailableTypes,
+    StorageObjectType,
+    StorageType
 };
