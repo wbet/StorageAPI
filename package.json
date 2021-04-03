@@ -1,6 +1,6 @@
 {
     "name": "@wbet/storage-api",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Wrapper over the Chrome and Browser storage API",
     "types": "./dist/esm/index.d.ts",
     "main": "./dist/umd/index.min.js",
