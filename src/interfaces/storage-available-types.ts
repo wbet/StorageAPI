@@ -1,10 +1,7 @@
-export type BasicTypes = string | number | boolean | string[] | number[] | boolean[];
-export interface StorageObjectType<T = StorageAvailableTypes> {
+export interface StorageObjectType<T = any> {
     [key: string]: T;
 }
-export type StorageAvailableTypes = BasicTypes | StorageObjectType | StorageObjectType[];
-
-export interface StorageChanges<T = StorageAvailableTypes> {
+export interface StorageChanges<T = any> {
     [key: string]: {
         oldValue?: T;
         newValue?: T;
