@@ -1,11 +1,5 @@
 /** @internal */
-export async function promiseToCallback(promise: Promise<any>, callback: (...args: any) => void) {
-    const result = await promise;
-    return callback(result);
-}
-
-/** @internal */
-export function callbackToPromise(func: (...args: any[]) => void, args: any[]): Promise<any> {
+export function tailCallbackToPromise(func: (...args: any[]) => void, args: any[]): Promise<any> {
     return new Promise((resolve, error) => {
         try {
             func(...args, (...results: any) => {
@@ -16,13 +10,12 @@ export function callbackToPromise(func: (...args: any[]) => void, args: any[]): 
         }
     });
 }
-
 /** @internal */
-export function checkChrome() {
-    return !!globalThis.chrome;
+export function checkChrome(selectedRuntime: typeof chrome | typeof browser) {
+    return !!globalThis.chrome && selectedRuntime === globalThis.chrome;
 }
 
 /** @internal */
-export function checkBrowser() {
-    return !!globalThis.browser;
+export function checkBrowser(selectedRuntime: typeof chrome | typeof browser) {
+    return !!globalThis.browser && selectedRuntime === globalThis.browser;
 }

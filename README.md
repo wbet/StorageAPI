@@ -276,7 +276,7 @@ import * as storageApi from '@wbet/storage-api';
 <script src="./dist/umd/index.min.js"></script>
 <script>
     // The 'storageApi' library is added as a property to the window object
-    window.storageApi.sendMessage(...)
+    window.storageApi.getFromStorageByKey(...)
     // ...
 </script>
 
@@ -284,7 +284,7 @@ import * as storageApi from '@wbet/storage-api';
 <script src="./dist/web/index.min.js"></script>
 <script>
      // The 'storageApi' library is saved in a global variable
-    storageApi.sendMessage(...)
+    storageApi.getFromStorageByKey(...)
 </script>
 
 // if you want to load the script from a CDN you can use
