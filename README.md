@@ -171,7 +171,7 @@ removeAllLocalStorage().then(() => {
 });
 ```
 
-## Save to storage
+## Get from storage
 
 ### Typescript
 
